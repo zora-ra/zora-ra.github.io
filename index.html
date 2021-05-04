@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capstone Presentation</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/gwulogo.png">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- slick slider -->
+    <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- style for this template -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive style -->
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+</head>
+<body>
+
+    <!-- preloader begin-->
+    <div class="preloader">
+        <div class="loader">
+            <hr><hr>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- scroll to top -->
+    <div class="scroll-to-top">
+    </div>
+    <!-- scroll to top -->
+
+    <!-- header begin -->
+    <div class="header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="top-left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-2 d-xl-flex d-lg-flex d-block align-items-center">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-7 d-xl-block d-lg-block d-flex align-items-center">
+                                <div class="logo">
+                                    <a href="#"><img src="assets/images/gwulogo.png" alt="LOGO"></a>
+                                </div>
+                            </div>
+                            <div class="d-xl-none d-lg-none d-block col-5">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-10">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#intro">Introduction</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#dataset">Dataset</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#analysis">Analysis</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#conclusion">Conclusion</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- banner begin -->
+    <div class="banner" id="home">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="banner-txt">
+                        <h1>Capstone Project</h1>
+                        <h2>LSTM-Based Models for Stock Price Forecast</h2>
+                        <p>DATS 6501 - Zixuan Huang</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-xl-flex d-lg-flex d-block align-items-center">
+                    <div class="part-img">
+                        <img src="assets/images/stock.png" alt="banner image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+
+
+    <!-- intro begin -->
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="heading">
+                <p>Introduction</p>
+                <h2>Problem Statement</h2>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="part-txt">
+                        <p>In this research, the objective was to utilized LSTM based models for stock trend predictions. 
+                            For my study, I have used S&P 500 index values for 20 years as data. An RNN model was used as a benchmark. 
+                            In comparison, four kinds of LSTM models, including Vanilla LSTM, Stacked LSTM, Bidirectional LSTM and CNN-LSTM 
+                            were built. In this work, the input was the daily close price of the S&P 500 index, the output of the model 
+                            was compared with the actual stock price data by using root mean squared error.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 d-xl-flex d-lg-flex d-block align-items-center">
+                    <div class="part-img">
+                        <img src="assets/images/about.png" alt="intro">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- intro end -->
+
+
+
+    <!-- dataset begin -->
+    <div class="dataset" id="dataset">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-5 col-lg-5 col-md-5">
+                    <div class="part-img">
+                        <img src="assets/images/plots/correlation matrix.png" alt="dataset">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-7 d-xl-flex d-lg-flex d-block align-items-center">
+                    <div class="part-txt">
+                        <div class="title">
+                            <p>Dataset</p>
+                        </div>
+                        <p> The raw dataset consists of the following variables: date, the open value of the index, 
+                            the high value of the index, low value of the index, the close value of the index, 
+                            and volume of the stock traded on a given date. After dropping missing values, 5273
+                             observations were left. Hence, the training dataset comprised of 4218 records spanning 
+                             over 843 weeks, and the testing dataset consisted of 1054 records spanning over 210 weeks. 
+                        <ul>
+                            <li><i class="fas fa-external-link-alt"></i><a href="https://finance.yahoo.com/quote/ES%3DF/history?p=ES%3DF">Data Source</a></li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dataset end -->
+
+
+
+
+
+<!-- analysis begin -->
+<div class="analysis" id="analysis">
+    <div class="container">
+        <div class="heading">
+            <p>Analysis</p>
+            <h2>Modeling</h2>
+        </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="rnn-tab" data-toggle="tab" href="#rnn" role="tab" aria-controls="rnn" aria-selected="true">
+                    <img src="assets/images/img-2.png">
+                    RNN model
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="vanilla-tab" data-toggle="tab" href="#vanilla" role="tab" aria-controls="vanilla" aria-selected="false">
+                    <img src="assets/images/img-5.png">
+                    Vanilla LSTM
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="stacked-tab" data-toggle="tab" href="#stacked" role="tab" aria-controls="stacked" aria-selected="false">
+                    <img src="assets/images/img-4.png">
+                    Stacked LSTM
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="bilstm-tab" data-toggle="tab" href="#bilstm" role="tab" aria-controls="bilstm" aria-selected="false">
+                    <img src="assets/images/img-6.png">
+                    BiLSTM
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cnn-tab" data-toggle="tab" href="#cnn" role="tab" aria-controls="cnn" aria-selected="false">
+                    <img src="assets/images/img-1.png">
+                    CNN LSTM
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="rnn" role="tabpanel" aria-labelledby="rnn-tab">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-5">
+                        <div class="part-img">
+                            <img src="assets/images/model structure/rnn model.png">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-7">
+                        <div class="part-txt">
+                            <h3>RNN Model</h3>
+                            <img src="assets/images/plots/RNN prediction.png" height="300" width="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vanilla" role="tabpanel" aria-labelledby="vanilla-tab">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-5">
+                        <div class="part-img">
+                            <img src="assets/images/model structure/vanilla lstm.png">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-7">
+                        <div class="part-txt">
+                            <h3>Vanilla LSTM</h3>
+                            <img src="assets/images/plots/Vanilla prediction.png"  height="300" width="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="stacked" role="tabpanel" aria-labelledby="stacked-tab">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-5">
+                        <div class="part-img">
+                            <img src="assets/images/model structure/stacked lstm.png" >
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-7">
+                        <div class="part-txt">
+                            <h3>Stacked LSTM</h3>
+                            <img src="assets/images/plots/Stacked prediction.png" height="300" width="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="bilstm" role="tabpanel" aria-labelledby="bilstm-tab">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-5">
+                        <div class="part-img">
+                            <img src="assets/images/model structure/bidirectional lstm.png" alt="image-1">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-7">
+                        <div class="part-txt">
+                            <h3>Bidirectional LSTM</h3>
+                            <img src="assets/images/plots/BiLSTM prediction.png"  height="300" width="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cnn" role="tabpanel" aria-labelledby="cnn-tab">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-5">
+                        <div class="part-img">
+                            <img src="assets/images/model structure/cnn lstm.png">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-7">
+                        <div class="part-txt">
+                            <h3>CNN LSTM</h3>
+                            <img src="assets/images/plots/CNN-LSTM prediction.png" height="300" width="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- analysis end -->
+
+<!-- conclusion begin -->
+<div class="conclusion" id="conclusion">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-xl-5 col-lg-5 col-md-5">
+                <div class="part-img">
+                    <img src="assets/images/model results.png" alt="conclusion">
+                    <img src="assets/images/plots/loss value.png" alt="conclusion">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-7 d-xl-flex d-lg-flex d-block align-items-center">
+                <div class="part-txt">
+                    <div class="title">
+                        <p>Conclusion</p>
+                        <h2>Key Findings</h2>
+                    </div>
+                    <p> 1. the more complex the model, the smaller the prediction error on this data set.
+                        LSTM-based models have a much higher capability in extracting and learning the features 
+                        of time series data than RNN model. 
+                    </p>
+                    <p>
+                        2. The CNN-LSTM model performed the best among these models. The CNN-LSTM model
+                         combines the advantages of both convolutional neural networks (CNN) and long short-term memory (LSTM). 
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-external-link-alt"></i><a href="https://docs.google.com/spreadsheets/d/1uYx574xJiPf4b8gzA206M1RLW8BzwAXbYJdBIbXyjdk/edit?usp=sharing">Model Results</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- conclusion end -->
+
+
+<!-- footer begin -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-3 col-md-6">
+                <div class="f-about">
+                    <img src="assets/images/ccas.png">
+                    <p>Zixuan Huang is a master's student in the Data Science Program at The George Washington University.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="links">
+                    <h3>Publications</h3>
+                    <ul>
+                        <li><a href="https://github.com/zora-ra/DATS-6501---Capstone-Project---Zixuan-Huang">Github</a></li>
+                        <li><a href="https://zora-ra.github.io/index.html">Github.io</a></li>
+                        <li><a href="https://zenodo.org/record/4736105#.YJDpn2Yza3I">Zendo</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+                <div class="location">
+                    <h3>Contact</h3>
+                    <p>Arilington, Virginia</p>
+                    <p>hzx97@gwu.edu</p>
+                    <p>+1 571 982 9150</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="row justify-content-between">
+                <div class="col-xl-5 col-lg-5 col-md-6">
+                    <div class="part-txt">
+                        <p>Copyright &copy; 2021. GWU DATA SCIENCE.</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-5">
+                    <div class="social">
+                        <a><i class="fab fa-facebook-f"></i></a>
+                        <a><i class="fab fa-twitter"></i></a>
+                        <a><i class="fab fa-instagram"></i></a>
+                        <a><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer end -->
+
+<!-- jquery -->
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<!-- sclick slider -->
+<!-- <script src="assets/js/slick.min.js"></script> -->
+<!-- bootstrap -->
+<!-- <script src="assets/js/bootstrap.min.js"></script> -->
+<!-- custom javascript -->
+<script src="assets/js/main.js"></script>
+<style>
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+</style>
+<div class="copyrights">
+</div>
+</body>
+</html>
+
+    
